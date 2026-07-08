@@ -1,31 +1,37 @@
-/* kernel.c - Первое ядро xStep OS
- * Версия: 26.1a / a1.0_build1
- */
+/* kernel.c - xStep OS */
 
-/* 1. Мультизагрузочный заголовок для GRUB */
-__asm__(
-    ".section .multiboot\n"
-    ".align 4\n"
-    ".long 0x1BADB002\n"           /* Магическое число */
-    ".long 0x03\n"                 /* Флаги */
-    ".long -(0x1BADB002 + 0x03)\n" /* Контрольная сумма */
-    ".section .text\n"
-);
+#include "vga.h"
+#include "user.h"
 
-/* 2. Точка входа в ядро */
 void kernel_main(void) {
-    /* 3. Выводим приветствие в видеопамять (0xB8000) */
-    volatile char* video = (volatile char*)0xB8000;
-    const char* msg = "                                                                                                                                                                                                                                                                                                                                                                                                                            Starting xStep...                                                                                                                                                                                                        ";
-    int i = 0;
+    vga_clear(0x00);
 
-    while (msg[i] != '\0') {
-        video[i * 2]     = msg[i];   /* Символ */
-        video[i * 2 + 1] = 0x0F;     /* Белый текст на чёрном фоне */
-        i++;
+    vga_puts("xStep OS - User System Test\n", 0x0F);
+    vga_puts("===========================\n", 0x0A);
+    vga_puts("\n", 0x0F);
+
+    user_system_init();
+    vga_puts("--- Setup ---\n", 0x0B);
+
+    user_create("danya", "Danya", "a78fdu3i", PERM_ADMIN | PERM_VGA | PERM_AUDIO | PERM_INPUT);
+    user_create("julia", "Julia", "df09f9d8", PERM_VGA | PERM_AUDIO | PERM_INPUT);
+
+    vga_puts("\n--- Login Test ---\n", 0x0B);
+
+    vga_puts("Login: danya / wrongpass\n", 0x07);
+    user_login("danya", "wrongpass");
+
+    vga_puts("Login: danya / a78fdu3i\n", 0x07);
+    user_t* u1 = user_login("danya", "a78fdu3i");
+
+    user_t* current = user_get_current();
+    if (current) {
+        vga_puts("Current: ", 0x0F);
+        vga_puts(current->display_name, 0x0E);
+        vga_puts("\n", 0x0F);
     }
 
-    /* 4. Останавливаемся (пока нет обработки прерываний) */
+    vga_puts("\nSystem halted.\n", 0x07);
     while (1) {
         __asm__ volatile ("hlt");
     }

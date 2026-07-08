@@ -1,15 +1,15 @@
 (Russian/Russia)
-ВНИМАНИЕ!
+## ВНИМАНИЕ!
 Загрузчик xStep Bootable Partition Manager заброшен.
-ЧЕМ МОЖНО ПОМОЧЬ?
+#### ЧЕМ МОЖНО ПОМОЧЬ?
 Если вы каким-то образом хотите исправить Bootable Partition Manager, напишите на мою почту:
-  uksusov378@gmail.com
+`uksusov378@gmail.com`
 Буду рад за помощь. Возможно, мы его возродим!
 
 (English/US)
-WARNING!
+## WARNING!
 The xStep Bootable Partition Manager loader has been abandoned.
-HOW CAN I HELP?
+#### HOW CAN I HELP?
 If you need to fix Bootable Partition Manager in any way, please email me at:
-  uksusov378@gmail.com
+`uksusov378@gmail.com`
 I'd be happy to help. Maybe we can revive it!

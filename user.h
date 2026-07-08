@@ -21,10 +21,18 @@ typedef struct {
     int is_logged_in;
 } user_t;
 
-void user_system_init(void);
-int user_create(const char* username, const char* display_name, const char* password, uint32_t perms);
-user_t* user_login(const char* username, const char* password);
-void user_logout(user_t* user);
-user_t* user_get_current(void);
+#ifdef __cplusplus
+extern "C" {
+    #endif
+
+    void user_system_init(void);
+    int user_create(const char* username, const char* display_name, const char* password, uint32_t perms);
+    user_t* user_login(const char* username, const char* password);
+    void user_logout(user_t* user);
+    user_t* user_get_current(void);
+
+    #ifdef __cplusplus
+}
+#endif
 
 #endif

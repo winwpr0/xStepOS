@@ -1,0 +1,40 @@
+# xStep Compiled Files
+*.bin
+*.o
+*.elf
+*.iso
+*.img
+*.efi
+*.vdi
+*.vmdk
+
+# Windows OS-Files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor files
+*.swp
+*.swo
+*~
+*.bak
+
+# Temporary & Logs
+*.log
+*.tmp
+*.cache
+*.lock
+
+# Build dirs
+build/
+dist/
+out/
+
+# IDE Settings
+.vscode
+.idea
+*.code-workspace
+
+# Specific files
+*.iso
+*.bin

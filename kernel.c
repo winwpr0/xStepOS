@@ -16,7 +16,7 @@ __asm__(
 void kernel_main(void) {
     /* 3. Выводим приветствие в видеопамять (0xB8000) */
     volatile char* video = (volatile char*)0xB8000;
-    const char* msg = "Welcome to xStep OS! Version 26.1a";
+    const char* msg = "                                                                                                                                                                                                                                                                                                                                                                                                                            Starting xStep...                                                                                                                                                                                                        ";
     int i = 0;
 
     while (msg[i] != '\0') {

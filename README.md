@@ -66,11 +66,3 @@ This project is licensed under the **GNU GPL v3** license.
 
 Сделано с 🧡 в рамках **Noverra OS Lab**.
 Made with 🧡 in the **Noverra OS Lab**.
-
-
----
-
-### Что делать дальше:
-1. Создай файл `README.md` в корне папки `xStepOS`.
-2. Вставь туда этот текст.
-3. Открой GitHub Desktop, сделай коммит с сообщением `Добавлен README.md` и нажми `Push origin`.

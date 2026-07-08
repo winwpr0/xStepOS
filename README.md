@@ -4,7 +4,7 @@
 Проект создан Владиславом (winwpr0_) в рамках экосистемы Noverra.
 Цель — создать лёгкую, минималистичную и понятную ОС, сочетающую в себе философию Unix и эстетику Windows NT.
 
-**xStep OS** is an experimental operating system being built from scratch in C and assembly language.
+**xStep OS (say as "cross-step")** is an experimental operating system being built from scratch in C and assembly language.
 Created by Vladislav (winwpr0_) as part of the Noverra ecosystem.
 The goal is to create a lightweight, minimalist, and intuitive OS that combines Unix philosophy with Windows NT aesthetics.
 

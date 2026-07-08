@@ -4,7 +4,7 @@
 Проект создан Владиславом (winwpr0_) в рамках экосистемы Noverra.
 Цель — создать лёгкую, минималистичную и понятную ОС, сочетающую в себе философию Unix и эстетику Windows NT.
 
-**xStep OS** is an experimental operating system being built from scratch in C and assembly language.
+**xStep OS (say as "cross-step")** is an experimental operating system being built from scratch in C and assembly language.
 Created by Vladislav (winwpr0_) as part of the Noverra ecosystem.
 The goal is to create a lightweight, minimalist, and intuitive OS that combines Unix philosophy with Windows NT aesthetics.
 
@@ -66,11 +66,3 @@ This project is licensed under the **GNU GPL v3** license.
 
 Сделано с 🧡 в рамках **Noverra OS Lab**.
 Made with 🧡 in the **Noverra OS Lab**.
-
-
----
-
-### Что делать дальше:
-1. Создай файл `README.md` в корне папки `xStepOS`.
-2. Вставь туда этот текст.
-3. Открой GitHub Desktop, сделай коммит с сообщением `Добавлен README.md` и нажми `Push origin`.
